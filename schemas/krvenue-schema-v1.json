@@ -1,0 +1,294 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Event Venue",
+    "type": "object",
+    "properties": {
+        "venue_id": {
+            "type": "string",
+            "description": "행사장 고유 식별자"
+        },
+        "name": {
+            "type": "string",
+            "description": "행사장 이름"
+        },
+        "location": {
+            "type": "object",
+            "properties": {
+                "address": {
+                    "type": "string",
+                    "description": "행사장 주소"
+                },
+                "city": {
+                    "type": "string",
+                    "description": "행사장이 위치한 도시"
+                },
+                "state": {
+                    "type": "string",
+                    "description": "행사장이 위치한 주"
+                },
+                "postal_code": {
+                    "type": "string",
+                    "description": "행사장 우편번호"
+                },
+                "country": {
+                    "type": "string",
+                    "description": "행사장이 위치한 국가"
+                }
+            },
+            "required": [
+                "address",
+                "city",
+                "state",
+                "postal_code",
+                "country"
+            ]
+        },
+        "capacity": {
+            "type": "integer",
+            "description": "행사장 최대 수용 인원"
+        },
+        "facilities": {
+            "type": "array",
+            "description": "행사장에서 이용 가능한 시설 목록",
+            "items": {
+                "type": "string"
+            }
+        },
+        "available_dates": {
+            "type": "array",
+            "description": "예약 가능한 날짜 목록",
+            "items": {
+                "type": "string",
+                "format": "date"
+            }
+        },
+        "pricing": {
+            "type": "object",
+            "properties": {
+                "base_price": {
+                    "type": "number",
+                    "description": "기본 대관료"
+                },
+                "currency": {
+                    "type": "string",
+                    "description": "가격의 통화"
+                },
+                "additional_charges": {
+                    "type": "array",
+                    "description": "추가 요금 목록",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "description": {
+                                "type": "string",
+                                "description": "추가 요금 설명"
+                            },
+                            "amount": {
+                                "type": "number",
+                                "description": "추가 요금 금액"
+                            }
+                        },
+                        "required": [
+                            "description",
+                            "amount"
+                        ]
+                    }
+                }
+            },
+            "required": [
+                "base_price",
+                "currency"
+            ]
+        },
+        "contact_info": {
+            "type": "object",
+            "properties": {
+                "phone": {
+                    "type": "string",
+                    "description": "연락처 전화번호"
+                },
+                "email": {
+                    "type": "string",
+                    "description": "연락처 이메일 주소"
+                }
+            },
+            "required": [
+                "phone",
+                "email"
+            ]
+        },
+        "emergency_info": {
+            "type": "object",
+            "properties": {
+                "defibrillators": {
+                    "type": "integer",
+                    "description": "행사장 내 제세동기 수"
+                },
+                "fire_extinguishers": {
+                    "type": "integer",
+                    "description": "행사장 내 소화기 수"
+                },
+                "emergency_exits": {
+                    "type": "array",
+                    "description": "비상 대피로 목록",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "police_department": {
+                    "type": "object",
+                    "properties": {
+                        "name": {
+                            "type": "string",
+                            "description": "관할 경찰서 이름"
+                        },
+                        "contact_number": {
+                            "type": "string",
+                            "description": "관할 경찰서 연락처"
+                        }
+                    },
+                    "required": [
+                        "name",
+                        "contact_number"
+                    ]
+                },
+                "fire_department": {
+                    "type": "object",
+                    "properties": {
+                        "name": {
+                            "type": "string",
+                            "description": "관할 소방서 이름"
+                        },
+                        "contact_number": {
+                            "type": "string",
+                            "description": "관할 소방서 연락처"
+                        }
+                    },
+                    "required": [
+                        "name",
+                        "contact_number"
+                    ]
+                },
+                "nearby_hospital": {
+                    "type": "object",
+                    "properties": {
+                        "name": {
+                            "type": "string",
+                            "description": "인근 병원 이름"
+                        },
+                        "contact_number": {
+                            "type": "string",
+                            "description": "인근 병원 연락처"
+                        }
+                    },
+                    "required": [
+                        "name",
+                        "contact_number"
+                    ]
+                }
+            },
+            "required": [
+                "defibrillators",
+                "fire_extinguishers",
+                "emergency_exits",
+                "police_department",
+                "fire_department",
+                "nearby_hospital"
+            ]
+        },
+        "transportation": {
+            "type": "object",
+            "properties": {
+                "public_transport": {
+                    "type": "string",
+                    "description": "대중교통 안내"
+                },
+                "parking": {
+                    "type": "object",
+                    "properties": {
+                        "nearby_parking_lots": {
+                            "type": "array",
+                            "description": "인근 주차장 정보",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "name": {
+                                        "type": "string",
+                                        "description": "주차장 이름"
+                                    },
+                                    "location": {
+                                        "type": "string",
+                                        "description": "주차장 위치"
+                                    },
+                                    "capacity": {
+                                        "type": "integer",
+                                        "description": "주차장 수용 인원"
+                                    },
+                                    "price_per_hour": {
+                                        "type": "number",
+                                        "description": "시간당 주차 요금"
+                                    }
+                                },
+                                "required": [
+                                    "name",
+                                    "location",
+                                    "capacity",
+                                    "price_per_hour"
+                                ]
+                            }
+                        }
+                    },
+                    "required": [
+                        "nearby_parking_lots"
+                    ]
+                }
+            },
+            "required": [
+                "public_transport",
+                "parking"
+            ]
+        },
+        "general_info": {
+            "type": "object",
+            "description": "기타 일반 정보",
+            "properties": {
+                "website": {
+                    "type": "string",
+                    "description": "행사장 웹사이트 URL"
+                },
+                "social_media": {
+                    "type": "object",
+                    "properties": {
+                        "facebook": {
+                            "type": "string",
+                            "description": "페이스북 페이지 URL"
+                        },
+                        "twitter": {
+                            "type": "string",
+                            "description": "트위터 핸들"
+                        },
+                        "instagram": {
+                            "type": "string",
+                            "description": "인스타그램 핸들"
+                        }
+                    }
+                },
+                "additional_notes": {
+                    "type": "string",
+                    "description": "추가 메모"
+                }
+            }
+        }
+    },
+    "required": [
+        "venue_id",
+        "name",
+        "location",
+        "capacity",
+        "available_dates",
+        "pricing",
+        "contact_info",
+        "emergency_info",
+        "transportation"
+    ]
+}

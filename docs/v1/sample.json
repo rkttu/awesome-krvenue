@@ -1,0 +1,91 @@
+{
+    "$schema": "https://rkttu.github.io/awesome-krvenue/schemas/krvenue-schema-v1.json#",
+    "venue_id": "VENUE12345",
+    "name": "서울 컨벤션 센터",
+    "location": {
+        "address": "서울특별시 중구 을지로 100",
+        "city": "서울",
+        "state": "서울특별시",
+        "postal_code": "04524",
+        "country": "대한민국"
+    },
+    "capacity": 5000,
+    "facilities": [
+        "와이파이",
+        "음향 시스템",
+        "프로젝터",
+        "VIP 룸"
+    ],
+    "available_dates": [
+        "2024-07-01",
+        "2024-07-15",
+        "2024-08-01"
+    ],
+    "pricing": {
+        "base_price": 5000000,
+        "currency": "KRW",
+        "additional_charges": [
+            {
+                "description": "청소 비용",
+                "amount": 100000
+            },
+            {
+                "description": "음향 시스템 사용료",
+                "amount": 200000
+            }
+        ]
+    },
+    "contact_info": {
+        "phone": "02-123-4567",
+        "email": "info@seoulconvention.kr"
+    },
+    "emergency_info": {
+        "defibrillators": 3,
+        "fire_extinguishers": 10,
+        "emergency_exits": [
+            "북쪽 출구",
+            "남쪽 출구",
+            "서쪽 출구"
+        ],
+        "police_department": {
+            "name": "서울 중부 경찰서",
+            "contact_number": "02-123-7890"
+        },
+        "fire_department": {
+            "name": "서울 중부 소방서",
+            "contact_number": "02-987-6543"
+        },
+        "nearby_hospital": {
+            "name": "서울 중앙 병원",
+            "contact_number": "02-456-7890"
+        }
+    },
+    "transportation": {
+        "public_transport": "지하철 2호선 을지로입구역 5번 출구에서 도보 5분 거리",
+        "parking": {
+            "nearby_parking_lots": [
+                {
+                    "name": "을지로 주차장",
+                    "location": "서울특별시 중구 을지로 110",
+                    "capacity": 200,
+                    "price_per_hour": 3000
+                },
+                {
+                    "name": "중앙 주차타워",
+                    "location": "서울특별시 중구 을지로 120",
+                    "capacity": 300,
+                    "price_per_hour": 3500
+                }
+            ]
+        }
+    },
+    "general_info": {
+        "website": "https://www.seoulconvention.kr",
+        "social_media": {
+            "facebook": "https://www.facebook.com/seoulconvention",
+            "twitter": "@seoulconvention",
+            "instagram": "@seoulconvention"
+        },
+        "additional_notes": "행사장 내에서는 금연입니다."
+    }
+}
