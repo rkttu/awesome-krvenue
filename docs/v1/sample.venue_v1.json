@@ -1,6 +1,6 @@
 {
-    "$schema": "https://rkttu.github.io/awesome-krvenue/schemas/krvenue-schema-v1.json#",
-    "venue_id": "VENUE12345",
+    "$schema": "https://rkttu.github.io/awesome-krvenue/schemas/krvenue-schema-v1.json",
+    "venue_id": "SAMPLE",
     "name": "서울 컨벤션 센터",
     "location": {
         "address": "서울특별시 중구 을지로 100",

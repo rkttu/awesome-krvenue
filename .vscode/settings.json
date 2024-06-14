@@ -1,11 +1,10 @@
 {
-    "json.schemas": [
-      {
-        "fileMatch": [
-          "/docs/v1/*.json"
-        ],
-        "url": "./schemas/krvenue-schema-v1.json"
-      }
-    ]
-  }
-  
+  "json.schemas": [
+    {
+      "fileMatch": [
+        "*.venue_v1.json"
+      ],
+      "url": "https://rkttu.github.io/awesome-krvenue/schemas/krvenue-schema-v1.json"
+    }
+  ]
+}
