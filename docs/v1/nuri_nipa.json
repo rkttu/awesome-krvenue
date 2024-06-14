@@ -1,0 +1,62 @@
+{
+    "$schema": "https://rkttu.github.io/awesome-krvenue/schemas/krvenue-schema-v1.json#",
+    "venue_id": "NURI_NIPA",
+    "name": "누리꿈스퀘어",
+    "location": {
+        "address": "서울특별시 마포구 월드컵북로 396 (상암동, 누리꿈스퀘어)",
+        "city": "서울",
+        "state": "서울특별시",
+        "postal_code": "03925",
+        "country": "대한민국"
+    },
+    "capacity": 5000,
+    "facilities": [
+        "와이파이"
+    ],
+    "available_dates": [
+    ],
+    "pricing": {
+        "base_price": 0,
+        "currency": "KRW",
+        "additional_charges": [
+        ]
+    },
+    "contact_info": {
+        "phone": "02-2132-1004",
+        "email": "nurinipa@nipa.kr"
+    },
+    "emergency_info": {
+        "defibrillators": 0,
+        "fire_extinguishers": 0,
+        "emergency_exits": [
+        ],
+        "police_department": {
+            "name": "상암파출소",
+            "contact_number": "02-309-9525"
+        },
+        "fire_department": {
+            "name": "마포소방서 상암119안전센터",
+            "contact_number": "02-309-4119"
+        },
+        "nearby_hospital": {
+            "name": "24시 열린의원",
+            "contact_number": "02-2132-2475"
+        }
+    },
+    "transportation": {
+        "public_transport": "",
+        "parking": {
+            "nearby_parking_lots": [
+            ]
+        }
+    },
+    "general_info": {
+        "website": "https://nuri.nipa.kr/",
+        "social_media": {
+            "facebook": "",
+            "twitter": "",
+            "instagram": ""
+        },
+        "additional_notes": "행사장 내에서는 금연입니다."
+    }
+}
