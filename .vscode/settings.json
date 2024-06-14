@@ -1,0 +1,11 @@
+{
+    "json.schemas": [
+      {
+        "fileMatch": [
+          "/docs/v1/*.json"
+        ],
+        "url": "./schemas/krvenue-schema-v1.json"
+      }
+    ]
+  }
+  
